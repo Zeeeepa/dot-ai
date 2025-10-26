@@ -14,7 +14,7 @@
 
 </div>
 
-**AI-powered platform engineering and DevOps automation through intelligent Kubernetes operations and conversational workflows.**
+**AI-powered DevOps automation: infrastructure provisioning, issue remediation, governance management, and project setup through natural language.**
 
 📚 [Quick Start](./docs/quick-start.md) | 🔧 [MCP Setup](./docs/mcp-setup.md) | 🛠️ [Features & Tools](./docs/mcp-tools-overview.md)
 
@@ -22,31 +22,44 @@
 
 ## What is DevOps AI Toolkit?
 
-DevOps AI Toolkit brings AI-powered intelligence to platform engineering, Kubernetes operations, and development workflows. It provides intelligent Kubernetes deployment recommendations through capability discovery and semantic matching, AI-powered issue remediation, automated repository setup with governance and security files, and shared prompt libraries for consistent development workflows—all through natural language conversation.
+DevOps AI Toolkit brings AI-powered intelligence to infrastructure provisioning, platform engineering, and development workflows through natural language interaction. Built on the Model Context Protocol (MCP), it provides:
 
-Built on the Model Context Protocol (MCP), it integrates seamlessly with Claude Code, Cursor, and VS Code to provide conversational interaction for complex DevOps and development tasks.
+**Infrastructure Provisioning**: Discovers what your cluster can provision (resources inside the cluster and infrastructure outside through any operators) and generates appropriate manifests based on your intent.
+
+**Capability, Pattern, and Policy Management**: Semantically understands what cluster resources do, codifies organizational best practices as reusable patterns, and enforces governance through policies.
+
+**Issue Remediation**: AI-powered root cause analysis with multi-step investigation and executable remediation commands.
+
+**Project Setup**: Generates governance, legal, and security files (LICENSE, CODE_OF_CONDUCT, CONTRIBUTING, SECURITY, GitHub workflows, etc.) for repository standardization.
+
+**Shared Prompts**: Curated prompts accessible as native slash commands in your AI coding assistant.
+
+Works with any infrastructure operators (Crossplane, AWS Controllers, ClusterAPI, database operators, custom operators) and any MCP-compatible AI agent.
 
 ## Mission
 
-DevOps AI Toolkit democratizes platform engineering and cloud native operations by making complex workflows accessible through AI-powered automation. We eliminate the expertise barrier that prevents teams from adopting best practices in Kubernetes operations, repository governance, and standardized development workflows—making professional-grade DevOps accessible through natural language interaction.
+DevOps AI Toolkit democratizes infrastructure provisioning and platform engineering by making capability-driven operations accessible through AI. We eliminate the expertise barrier that prevents teams from leveraging their cluster's full potential. Whether provisioning cloud resources through operators, deploying applications with native Kubernetes resources, or managing infrastructure across any environment, teams describe what they need in plain English instead of learning operator-specific schemas or memorizing resource types.
 
 ## Who Should Use This?
 
 **DevOps AI Toolkit is for teams who want to**:
-- Manage cloud resources (AWS, Azure, GCP) using Kubernetes as a control plane (developers, platform engineers)
-- Quickly diagnose and fix cluster and infrastructure issues (SREs, DevOps engineers)
-- Standardize resource provisioning with organizational patterns and policies (security engineers, platform teams)
-- Bootstrap repositories with governance and security files (project maintainers)
-- Access curated development prompts through native slash commands (development teams)
+- Provision infrastructure through Kubernetes operators without learning CRD schemas
+- Deploy applications using cluster capabilities discovered automatically
+- Manage resources inside the cluster (Deployments, Services) and outside (databases, VMs, storage on any infrastructure)
+- Quickly diagnose and fix cluster and infrastructure issues
+- Standardize resource provisioning with organizational patterns and policies
+- Bootstrap repositories with governance and security files
+- Access curated development prompts through native slash commands
 
 ## Scope
 
 ### In Scope
-- AI-powered resource provisioning recommendations using Kubernetes as control plane
+- Capability-driven resource provisioning (discovers and leverages whatever exists in your cluster)
+- Infrastructure provisioning inside cluster (native resources) and outside cluster (via any operators)
+- Universal compatibility with any infrastructure operators and any MCP-compatible AI agents
 - Intelligent issue remediation and root cause analysis
 - Organizational pattern and policy management with semantic search
-- MCP-based integration with AI coding assistants
-- Multi-provider AI model support (Claude, GPT, Gemini)
+- Multi-provider AI model support (Claude, GPT, Gemini, Mistral, DeepSeek, XAI)
 - Project setup with governance, legal, and security files
 
 ### Out of Scope
@@ -56,8 +69,8 @@ DevOps AI Toolkit democratizes platform engineering and cloud native operations 
 
 ## Key Features
 
-### 🔍 Resource Provisioning Intelligence
-Automatically discovers cluster resources using semantic capability management. AI understands what each resource actually does, providing intelligent recommendations for provisioning resources across clouds using Kubernetes as a control plane.
+### 🔍 Capability-Driven Infrastructure Provisioning
+Discovers what your cluster can provision: native Kubernetes resources (Deployments, Services, StatefulSets) and infrastructure through any operators (databases, VMs, storage, networks). Works with any operators and any infrastructure (cloud, on-prem, edge). AI understands what each capability actually does, providing intelligent recommendations based on your cluster's actual capabilities.
 📖 [Deployment Guide](./docs/mcp-recommendation-guide.md) | [Capability Management](./docs/mcp-capability-management-guide.md)
 
 ### 🛠️ Issue Remediation
@@ -76,8 +89,8 @@ Generate 25+ governance, legal, and automation files (LICENSE, CODE_OF_CONDUCT, 
 Access curated prompts as native slash commands (`/dot-ai:prompt-name`) in your coding agent for consistent workflows across projects.
 📖 [Learn more →](./docs/mcp-prompts-guide.md)
 
-### ⚡ AI Integration
-Works with Claude Code, Cursor, VS Code via Model Context Protocol. Supports multiple AI providers (Claude, GPT, Gemini) for flexibility and cost optimization.
+### ⚡ Universal AI Integration
+Works with any MCP-compatible AI agent via Model Context Protocol. Supports multiple AI providers (Claude, GPT, Gemini, Mistral, DeepSeek, XAI) for flexibility and cost optimization.
 📖 [AI Model Configuration](./docs/mcp-setup.md#ai-model-configuration)
 
 ## See It In Action

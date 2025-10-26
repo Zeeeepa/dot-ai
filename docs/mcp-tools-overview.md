@@ -10,16 +10,16 @@ This video demonstrates the core AI-powered deployment workflow: capabilities di
 
 ## Available Tools
 
-### 🚀 Kubernetes Deployment Recommendations
-AI-powered application deployment assistance with smart intent clarification, semantic resource matching, and automated manifest generation.
-- **What it does**: Clarifies deployment intents through adaptive questioning, then provides intelligent deployment suggestions based on your cluster capabilities
-- **Use when**: Deploying applications to Kubernetes clusters, especially when requirements are not fully specified
-- **📖 Full Guide**: [Kubernetes Deployment Recommendations](mcp-recommendation-guide.md)
+### 🚀 Infrastructure Provisioning
+Capability-driven provisioning for resources inside the cluster (Deployments, Services, StatefulSets) and outside through any operators (databases, VMs, storage on any infrastructure).
+- **What it does**: Discovers available capabilities in your cluster, matches your intent to those capabilities, and generates appropriate manifests for resources anywhere
+- **Use when**: Provisioning infrastructure through Kubernetes (native resources or operator-managed resources on any cloud, on-prem, or edge)
+- **📖 Full Guide**: [Infrastructure Provisioning](mcp-recommendation-guide.md)
 
-### 🔍 Capability Management  
-Teaches the AI what your Kubernetes resources actually do through semantic discovery and analysis.
-- **What it does**: Scans cluster resources and discovers their capabilities for intelligent matching
-- **Use when**: Setting up recommendations (required) or improving deployment intelligence
+### 🔍 Capability Management
+Discovers what your cluster can do by analyzing all resources (native Kubernetes and any operators/CRDs).
+- **What it does**: Scans cluster resources and uses AI to understand their capabilities for semantic matching
+- **Use when**: Setting up infrastructure provisioning (required) or improving capability understanding
 - **📖 Full Guide**: [Capability Management](mcp-capability-management-guide.md)
 
 ### 🏛️ Pattern Management
@@ -84,11 +84,10 @@ HTTP REST endpoints for all DevOps AI Toolkit capabilities, enabling integration
 
 ## Tool Dependencies
 
-- **Deployment Recommendations** ← requires **Capability Management**
-- **Pattern Management** → enhances **Deployment Recommendations**
-- **Policy Management** → enhances **Deployment Recommendations**
+- **Infrastructure Provisioning** ← requires **Capability Management**
+- **Pattern Management** → enhances **Infrastructure Provisioning**
+- **Policy Management** → enhances **Infrastructure Provisioning**
 - **Kubernetes Issue Remediation** ← independent
-<!-- - **Platform Building** ← independent (requires Nushell runtime) -->
 - **Project Setup** ← independent
 - **Shared Prompts Library** ← independent
 - **REST API Gateway** ← provides HTTP access to all tools
