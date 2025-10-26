@@ -41,21 +41,12 @@ The project addresses critical challenges in modern DevOps:
 - **Troubleshooting Complexity**: Diagnosing issues requires deep expertise and multi-step investigation
 - **Knowledge Silos**: Platform engineering best practices and governance policies locked in expert engineers' heads
 - **Repetitive Toil**: Setting up repositories with proper governance, security, and automation files is manual and inconsistent
-- **Workflow Fragmentation**: Development teams lack standardized prompts and workflows across projects
 
-**Core Capabilities**:
+**How it works**: Discovers cluster capabilities (resources, operators, CRDs) and uses AI to semantically understand what each resource does. Users describe needs in plain English ("I need a PostgreSQL database"), and the system matches intent to available capabilities, generates manifests, and provisions resources across any infrastructure. It performs multi-step root cause analysis for issues with executable remediation commands, codifies organizational best practices as reusable patterns, and generates 25+ governance/security files for repository standardization.
 
-1. **Capability-Driven Infrastructure Provisioning**: Discovers what your cluster can provision (resources inside the cluster like Deployments, Services, or infrastructure outside through any operators like databases, VMs, storage). Users describe what they need in plain English ("I need a PostgreSQL database"), and the system semantically matches intent to available capabilities, generates appropriate manifests, and provisions resources wherever those capabilities reach (any cloud, on-prem, edge, etc.). Works with any infrastructure operators.
+Built on the Model Context Protocol (MCP), it integrates with any MCP-compatible AI agent and supports multiple AI providers (Claude, GPT, Gemini, Mistral, DeepSeek, XAI).
 
-2. **Semantic Understanding**: Uses AI to understand what each cluster resource actually does (not just technical schemas). Stores capability knowledge in a vector database for intelligent matching. Codifies organizational best practices as reusable patterns and enforces governance through policies.
-
-3. **AI-Powered Issue Remediation**: Multi-step root cause analysis for Kubernetes and infrastructure issues, with executable remediation commands that include risk assessment and safety mechanisms.
-
-4. **Project Automation**: Generates 25+ governance, legal, and security files (LICENSE, CODE_OF_CONDUCT, CONTRIBUTING, SECURITY, GitHub workflows) for repository standardization. Provides shared prompts accessible as native slash commands in AI coding assistants.
-
-Built on the Model Context Protocol (MCP), it integrates with any MCP-compatible AI agent for conversational interaction. Supports multiple AI providers (Claude, GPT, Gemini, Mistral, DeepSeek, XAI) for flexibility.
-
-**What makes it unique**: DevOps AI Toolkit is the only CNCF project combining semantic capability discovery, MCP integration, and AI-powered automation across infrastructure provisioning, remediation, governance, and project setup. While projects like K8sGPT focus on troubleshooting, we provide a comprehensive DevOps automation platform that works with any infrastructure operators and any MCP-compatible agents.
+**What makes it unique**: First project combining semantic capability discovery, MCP integration, and AI-powered automation across infrastructure provisioning, remediation, governance, and project setup. Unlike single-purpose tools like K8sGPT, provides a comprehensive DevOps automation platform working with any infrastructure operators and MCP-compatible agents.
 
 ---
 
@@ -648,8 +639,7 @@ We're committed to actively participating in assigned TAG/working group meetings
 
 **CNCF Ambassadors**:
 - **Abby Bangser** - CNCF Ambassador, co-lead of CNCF Platforms Working Group, Syntasso founding principal engineer
-- **Whitney Lee** - CNCF Ambassador, VMware Tanzu Staff Technical Advocate
-- **Oleg Nenashev** - CNCF/CDF Ambassador, former CDF TOC Chair, Jenkins core maintainer
+- **Whitney Lee** - CNCF Ambassador, Datadog
 - **Saiyam Pathak** - CNCF Ambassador, TAG Operational Resilience Chair (elected 2025), TAG Environmental Sustainability Lead, Kubesimplify founder
 - **William Rizzo** - CNCF Ambassador, Mirantis Strategy Lead, TAG nominee for Infrastructure and Workloads Foundation
 - **Saim Safdar** - CNCF Ambassador, TAG Developer Experience Chair nominee, Platform Working Group contributor, Cloud Native Islamabad organizer
